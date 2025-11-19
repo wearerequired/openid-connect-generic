@@ -115,11 +115,6 @@ class OpenID_Connect_Generic_Client_Wrapper {
 			add_action( 'parse_request', array( $client_wrapper, 'alternate_redirect_uri_parse_request' ) );
 		}
 
-		// Verify token for any logged in user.
-		if ( is_user_logged_in() ) {
-			add_action( 'wp_loaded', array( $client_wrapper, 'ensure_tokens_still_fresh' ) );
-		}
-
 		// Modify authentication-token request to include PKCE code verifier.
 		if ( true === (bool) $settings->enable_pkce ) {
 			add_filter( 'openid-connect-generic-alter-request', array( $client_wrapper, 'alter_authentication_token_request' ), 15, 2 );

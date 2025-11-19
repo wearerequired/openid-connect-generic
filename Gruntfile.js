@@ -67,7 +67,7 @@ module.exports = function (grunt) {
 					'!CONTRIBUTING.md',
 					'!README.md',
 					'!HOWTO.md',
-					'!phpcs.xml', '!phpcs.xml.dist', '!phpstan.neon.dist', '!grumphp.yml.dist', // CodeSniffer Configuration.
+					'!phpcs.xml', '!phpcs.xml.dist', '!phpstan.neon.dist', // CodeSniffer Configuration.
 					'!docker-compose.override.yml', // Local Docker Development configuration.
 					'!codecov.yml', // Code coverage configuration.
 					'!tools/**', // Local Development/Build tools configuration.
@@ -213,4 +213,3 @@ module.exports = function (grunt) {
 	grunt.registerTask('release', ['checkbranch:HEAD', 'checkrepo', 'gitinfo', 'checktextdomain', 'clean', 'copy']);
 
 };
-

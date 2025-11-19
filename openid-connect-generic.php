@@ -384,6 +384,7 @@ class OpenID_Connect_Generic {
 				'email_format'           => '{email}',
 				'displayname_format'     => '',
 				'identify_with_username' => false,
+				'require_prompt'         => false,
 				'state_time_limit'       => 180,
 
 				// Plugin settings.

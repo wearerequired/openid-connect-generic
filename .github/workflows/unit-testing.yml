@@ -90,12 +90,12 @@ jobs:
     - name: PHPUnit Bleeding Edge Support
       if: matrix.bleeding-edge
       run: |
-        composer require sebastian/code-unit:dev-main phpunit/phpunit:dev-master phpro/grumphp:dev-master --dev -W --ignore-platform-req=php --update-with-all-dependencies
+        composer require sebastian/code-unit:dev-main phpunit/phpunit:dev-master --dev -W --ignore-platform-req=php --update-with-all-dependencies
 
     - name: PHPUnit PHP 8.0 Support
       if: matrix.php-version == '8.0'
       run: |
-        composer require phpunit/phpunit:^8.0 phpro/grumphp:^1.10.0 --dev -W --ignore-platform-req=php
+        composer require phpunit/phpunit:^8.0 --dev -W --ignore-platform-req=php
 
     - name: Install Composer Dependencies (PHP 8.x)
       if: matrix.php-version == '8.0' || matrix.php-version == '8.1'

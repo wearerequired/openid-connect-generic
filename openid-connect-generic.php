@@ -386,6 +386,7 @@ class OpenID_Connect_Generic {
 				'identify_with_username' => false,
 				'require_prompt'         => false,
 				'state_time_limit'       => 180,
+
 				// Plugin settings.
 				'enforce_privacy'          => defined( 'OIDC_ENFORCE_PRIVACY' ) ? intval( OIDC_ENFORCE_PRIVACY ) : 0,
 				'alternate_redirect_uri'   => 0,

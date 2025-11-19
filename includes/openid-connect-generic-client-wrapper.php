@@ -236,7 +236,7 @@ class OpenID_Connect_Generic_Client_Wrapper {
 		if ( true === (bool) $this->settings->enable_pkce ) {
 			$pkce_data = $this->pkce_code_generator();
 			if ( false !== $pkce_data ) {
-				$url_format .= '&code_challenge=%8$s&code_challenge_method=%9$s';
+				$url_format .= '&code_challenge=%9$s&code_challenge_method=%10$s';
 			}
 		}
 

@@ -162,7 +162,7 @@ class OpenID_Connect_Generic_Client {
 	public function validate_authentication_request( $request ) {
 		// Look for an existing error of some kind.
 		if ( isset( $request['error'] ) ) {
-			return new WP_Error( 'unknown-error', 'An unknown error occurred.', $request );
+			return new WP_Error( $request['error'], $request['error_description'] ?? 'An unknown error occurred.', $request );
 		}
 
 		// Make sure we have a legitimate authentication code and valid state.

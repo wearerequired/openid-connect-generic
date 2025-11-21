@@ -112,7 +112,7 @@ class OpenID_Connect_Generic {
 	 *
 	 * @var OpenID_Connect_Generic_Client
 	 */
-	private $client;
+	public $client;
 
 	/**
 	 * Client wrapper.

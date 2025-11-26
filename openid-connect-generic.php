@@ -191,7 +191,7 @@ class OpenID_Connect_Generic {
 			$redirect_uri = site_url( '/openid-connect-authorize' );
 		}
 
-		return $redirect_uri;
+		return apply_filters( 'openid-connect-generic-redirect-uri', $redirect_uri );
 	}
 
 	/**
